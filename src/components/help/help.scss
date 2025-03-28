@@ -1,0 +1,110 @@
+.help-request {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    &__container {
+        background-color: #1a1a1a; // Qora fon, tasvirdagi kabi
+        text-align: center;
+        color: #fff;
+        padding: 40px 0;
+        padding: 20px;
+
+        .help-request__avatars {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+
+            .avatar {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 2px solid #fff;
+                object-fit: cover;
+            }
+        }
+
+        .help-request__title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .help-request__desc {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 25px;
+        }
+
+        .help-request__button {
+            background-color: #007bff; // Ko‘k tugma, tasvirdagi kabi
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+    }
+
+    // Responsiv Design
+    @media (max-width: 768px) {
+        padding: 30px 0;
+
+        .help-request__container {
+            padding: 15px;
+
+            .help-request__title {
+                font-size: 1.5rem;
+            }
+
+            .help-request__desc {
+                font-size: 1rem;
+            }
+
+            .help-request__button {
+                padding: 10px 25px;
+                font-size: 1rem;
+            }
+
+            .avatar {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    @media (max-width: 300px) {
+        padding: 20px 0;
+
+        .help-request__container {
+            padding: 10px;
+
+            .help-request__title {
+                font-size: 1.2rem;
+            }
+
+            .help-request__desc {
+                font-size: 0.9rem;
+            }
+
+            .help-request__button {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+            }
+
+            .avatar {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}

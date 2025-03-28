@@ -1,0 +1,166 @@
+.consulting {
+  padding: 100px 0;
+
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: flex-start;
+  }
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  &-left {
+    p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 15px 0;
+        color: #333;
+        font-size: 14px;
+        display: grid;
+        grid-template-columns: 15px 1fr;
+        align-items: flex-start;
+        text-align: start;
+        gap: 10px;
+
+        &::before {
+          content: "✔";
+          color: white;
+          margin-right: 8px;
+          width: 15px;
+          height: 15px;
+          background: #1351d8;
+          text-align: center;
+          line-height: 15px;
+          border-radius: 50%;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+.timeline {
+  position: relative;
+  padding: 25px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #f3f6fd;
+    transform: translateX(-50%);
+  }
+}
+
+.timeline-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  position: relative;
+
+  .step-number {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f3f6fd !important;
+    z-index: 1;
+    color: #1351d8 !important;
+  }
+
+  .step-content {
+    flex: 1;
+    padding: 15px;
+    background: #f3f6fd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 45%;
+    text-align: start;
+  }
+
+  &:nth-child(odd) {
+    flex-direction: row-reverse;
+
+    .step-content {
+      text-align: start;
+      margin-right: -340px;
+    }
+  }
+
+  &:nth-child(even) {
+    .step-content {
+      margin-left: -340px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+
+    .step-content {
+      text-align: center;
+      margin: 40px 0 0 0;
+      max-width: 100%;
+    }
+
+    .step-number {
+      position: relative;
+      left: auto;
+      transform: none;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f3f6fd;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.step-content {
+  h3 {
+    font-family: Yantramanav;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    color: #212529;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0%;
+    color: #1c1c1cb3;
+  }
+}
+
+@media (max-width:1250px) {
+  .consulting-container {
+    grid-template-columns: 1fr;
+  }
+}

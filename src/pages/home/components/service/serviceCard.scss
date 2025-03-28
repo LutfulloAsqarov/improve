@@ -1,0 +1,222 @@
+.serviceCard {
+    padding: 84px 0;
+    background: #1C1C1C;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+
+    &__back {
+        position: absolute;
+        background: url('../../../../assets/images/service.svg') no-repeat right;
+        background-size: cover;
+        right: -120px;
+        bottom: -20px;
+        z-index: 1;
+        width: 600px;
+        height: 600px;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 150px;
+    }
+
+    &__top>div {
+        max-width: 780px;
+    }
+
+    &__btn {
+        padding: 13px 26px;
+        background: #1351D8;
+        border-radius: 30px;
+        border: 1px solid #1351D8;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        justify-content: space-between;
+        color: white;
+        transition: .4s;
+
+        &:hover {
+            color: #1351D8;
+            background: white;
+        }
+    }
+
+    &__cards__top {
+        padding: 45px 0 24px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
+
+    &__card__top {
+        background: #FFFFFF;
+        padding: 24px;
+        border-radius: 10px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        padding: 24px 0 10px;
+        font-family: "Yantramanav";
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: 0%;
+        color: #212529;
+    }
+
+    &__card__desc {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0%;
+        color: #1C1C1CB3;
+    }
+
+    &__card__btn {
+        margin-top: 10px;
+        font-family: "Yantramanav";
+        padding: 6px 16px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0%;
+        border: 1px solid #1351D8;
+        background: #1351D8;
+        color: #FFFFFF;
+        border-radius: 6px;
+        transition: .4s;
+
+        &:hover {
+            color: #1351D8;
+            background: white;
+        }
+
+        svg {
+            font-size: 14px;
+        }
+    }
+
+    &__cards__bottom {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    &__card__bottom {
+        background: #FFFFFF;
+        border-radius: 10px;
+        padding: 24px;
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    &__cards__bottom__right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    &__subtitle {
+        padding: 29px 0 10px;
+        font-family: "Yantramanav";
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: 0%;
+        color: #212529;
+    }
+
+    &__card__items {
+        padding: 18px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    &__card__item {
+        display: grid;
+        grid-template-columns: 14px 1fr;
+        gap: 18px;
+        align-items: center;
+    }
+
+    &__card__item__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 14px;
+        height: 14px;
+        background: #1351D8;
+        border-radius: 50%;
+        color: white;
+        border: 1px solid #1351D8;
+
+        svg {
+            font-size: 10px;
+        }
+    }
+
+    &__card__info__btn {
+        margin-left: calc(100% - 42px);
+    }
+
+    @media (max-width:1170px) {
+        &__top {
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+    }
+
+    @media (max-width:1038px) {
+        &__cards__top {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width:1000px) {
+        &__cards__bottom {
+            grid-template-columns: 1fr;
+        }
+
+
+    }
+
+    @media (max-width:530px) {
+        &__cards__top {
+            grid-template-columns: 1fr;
+        }
+
+        &__cards__bottom {
+            grid-template-columns: 1fr;
+        }
+
+        &__card__bottom {
+            flex-direction: column;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__subtitle {
+            padding: 10px 0 10px;
+        }
+    }
+
+    @media (max-width:490px) {
+        &__cards__bottom__right {
+            grid-template-columns: 1fr;
+        }
+    }
+}

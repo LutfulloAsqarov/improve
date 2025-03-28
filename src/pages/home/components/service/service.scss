@@ -1,0 +1,41 @@
+.service {
+    padding: 84px 0;
+
+
+    &__top {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    &__btn {
+        padding: 13px 26px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        border: none;
+        gap: 10px;
+        font-size: 13px;
+        justify-content: space-between;
+        color: white;
+        transition: .4s;
+
+        svg {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width:450px) {
+        &__top {
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        &__btn {
+            padding: 10px 40px;
+        }
+    }
+}

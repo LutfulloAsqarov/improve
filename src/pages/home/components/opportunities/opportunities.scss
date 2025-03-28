@@ -1,0 +1,85 @@
+.opportunities {
+    padding: 120px 0;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 660px 1fr;
+        gap: 24px;
+        align-items: flex-start;
+    }
+
+    &__line {
+        border: 0.5px solid #D9D9D9DD;
+        margin: 35px 0 40px;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: flex-start;
+        gap: 50px;
+    }
+
+    &__card__icon {
+        width: 46px;
+        height: 46px;
+        border: 1px solid #1351D81A;
+        background: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+        img {
+            width: 21px;
+            height: 21px;
+        }
+    }
+
+    &__card__title {
+        padding: 22px 0 15px;
+        color: #000000;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 19px;
+        letter-spacing: -3%;
+    }
+
+    &__card__desc {
+        color: #1C1C1CB2;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 22px;
+        letter-spacing: -3%;
+    }
+
+    &__img {
+        width: 100%;
+        margin: 0 24px !important;
+        padding-top: 35px !important;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    @media (max-width:1250px) {
+        &__container {
+            grid-template-columns: 1fr;
+        }
+
+        &__img {
+            img {
+                min-width: 1200px;
+            }
+        }
+    }
+
+    @media (max-width:550px) {
+        &__cards {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+    }
+
+}

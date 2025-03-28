@@ -1,0 +1,46 @@
+.partner-card {
+    background: #1C1C1C;
+    padding: 100px 0;
+    margin: 120px auto;
+
+    &__box {
+        display: grid;
+        grid-template-columns: 590px 1fr;
+        align-items: center;
+        gap: 76px;
+    }
+
+    &__images {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        img {
+            width: calc(50% - 12px);
+        }
+    }
+
+    @media (max-width:1200px) {
+        &__box {
+            gap: 20px;
+        }
+    }
+
+    @media (max-width:1000px) {
+        &__box {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 24px;
+        }
+    }
+
+    @media (max-width:420px) {
+        &__images {
+            flex-direction: column;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
