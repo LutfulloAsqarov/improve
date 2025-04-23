@@ -1,5 +1,6 @@
 .group {
     margin-top: 120px;
+    padding-bottom: 80px;
     &__top {
         display: grid;
         grid-template-columns: 675px 1fr;
@@ -7,31 +8,45 @@
         gap: 50px;
     }
 
+    // &__wrapper {
+    //     position: relative;
+    //     height: 466px;
+    //     margin: 50px 0;
+    //     overflow: auto;
+    //     &::-webkit-scrollbar {
+    //         display: none;
+    //     }
+    // }
     &__wrapper {
-        position: relative;
-        height: 466px;
-        margin: 50px 0;
-        overflow: auto;
-        &::-webkit-scrollbar {
-            display: none;
-        }
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
     }
 
     &__content {
         display: grid;
         grid-template-columns: 1fr 655px;
         gap: 24px;
-        position: sticky;
-        top: 0;
-        height: 100%;
-        &__section {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        // &:nth-child(even) {
+        //     grid-template-columns: 655px 1fr;
+        //     .group__img {
+        //         grid-column: 2;
+        //     }
+        //     .group__info {
+        //         grid-column: 1;
+        //     }
+        // }
     }
+    // position: sticky;
+    // top: 0;
+    // height: 100%;
+    // &__section {
+    //     position: relative;
+    //     height: 100vh;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    // }
 
     &__img {
         padding: 24px;
